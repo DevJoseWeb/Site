@@ -1,0 +1,59 @@
+section {
+    width: 90%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: initial;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+mat-card {
+    width: 30%;
+    margin: 1vh 10px;
+    animation-name: aparece;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    text-align: left;
+    transform: translateX(-400%);
+}
+
+mat-card-actions {
+    text-align: right;
+}
+
+.header-image {
+    background-color: #37b597;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a button {
+    cursor: pointer;
+}
+
+@keyframes aparece {
+    from {
+        transform: translateX(-400%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media(max-width: 700px) {
+    mat-card {
+        width: 90%;
+    }
+}

@@ -1,0 +1,98 @@
+<section>
+    <mat-accordion class="example-headers-align">
+        <mat-expansion-panel *ngFor="let work of works; let i = index" [expanded]="step === i" (opened)="setStep(i)" hideToggle="true">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{work.name}}
+                </mat-panel-title>
+                <mat-panel-description>
+                    {{work.dev}}
+                    <span>{{work.year}}</span>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div class="content">
+                <div [ngSwitch]="i">
+                    <div *ngSwitchCase="0">
+                        <div class="working" *ngFor="let working of srb">
+
+                            <div class="wimg">
+                                <img src="./assets/img/{{working.photo}}" class="img100" />
+                            </div>
+                            <div class="winfo">
+                                <h2>{{working.name}}</h2>
+                                <h3>{{working.dev}}</h3>
+                                <a href="{{working.url}}" *ngIf="working.url != '#'" target="_blank"><button mat-button color="primary">Ver</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngSwitchCase="1">
+                        <div class="working" *ngFor="let working of copico">
+
+                            <div class="wimg">
+                                <img src="./assets/img/{{working.photo}}" class="img100" />
+                            </div>
+                            <div class="winfo">
+                                <h2>{{working.name}}</h2>
+                                <h3>{{working.dev}}</h3>
+                                <a href="{{working.url}}" *ngIf="working.url != '#'" target="_blank"><button mat-button color="primary">Ver</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngSwitchCase="2">
+                        <div class="working" *ngFor="let working of induxsoft">
+
+                            <div class="wimg">
+                                <img src="./assets/img/{{working.photo}}" class="img100" />
+                            </div>
+                            <div class="winfo">
+                                <h2>{{working.name}}</h2>
+                                <h3>{{working.dev}}</h3>
+                                <a href="{{working.url}}" *ngIf="working.url != '#'" target="_blank"><button mat-button color="primary">Ver</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngSwitchCase="3">
+                        <div class="working" *ngFor="let working of tg">
+
+                            <div class="wimg">
+                                <img src="./assets/img/{{working.photo}}" class="img100" />
+                            </div>
+                            <div class="winfo">
+                                <h2>{{working.name}}</h2>
+                                <h3>{{working.dev}}</h3>
+                                <a href="{{working.url}}" *ngIf="working.url != '#'" target="_blank"><button mat-button color="primary">Ver</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngSwitchCase="4">
+                        <div class="working" *ngFor="let working of cam">
+
+                            <div class="wimg">
+                                <img src="./assets/img/{{working.photo}}" class="img100" />
+                            </div>
+                            <div class="winfo">
+                                <h2>{{working.name}}</h2>
+                                <h3>{{working.dev}}</h3>
+                                <a href="{{working.url}}" *ngIf="working.url != '#'" target="_blank"><button mat-button color="primary">Ver</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <mat-action-row *ngIf="i == 0">
+                <button mat-button color="primary" (click)="nextStep()">Para Frente</button>
+            </mat-action-row>
+            <mat-action-row *ngIf="i > 0 && i != nwork">
+                <button mat-button color="warn" (click)="prevStep()">Para Trás</button>
+                <button mat-button color="primary" (click)="nextStep()">Seguinte</button>
+            </mat-action-row>
+            <mat-action-row *ngIf="i == nwork">
+                <button mat-button color="warn" (click)="prevStep()">Atrás</button>
+                <button mat-button color="primary" (click)="nextStep()">Fim</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+    </mat-accordion>
+</section>

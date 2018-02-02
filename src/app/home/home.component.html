@@ -1,0 +1,37 @@
+<section>
+    <mat-tab-group>
+        <mat-tab label="Front End">
+            <div class="content">
+                <div class="tecno" *ngFor="let fend of front; let o = index;" [ngStyle]="{'animation-delay': o*100+'ms'}">
+                    <h2>{{fend.tec}}</h2>
+                    <img src="./assets/img/{{fend.tec}}.jpg" alt="Desenvolvedor em {{fend.tec}}" />
+                    <div class="infos">
+                        <p>Desenvolvidos {{fend.tot}} Projetos.</p>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="BD">
+            <div class="content">
+                <div class="tecno" *ngFor="let bdn of bd">
+                    <h2>{{bdn.tec}}</h2>
+                    <img src="./assets/img/{{bdn.tec}}.jpg" alt="Desenvolvedor em {{bdn.tec}}" />
+                    <div class="infos">
+                        <p>Seguintes Bases de Dados {{bdn.tec}}</p>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Outros">
+            <div class="content">
+                <div class="tecno" *ngFor="let ot of other">
+                    <h2>{{ot.tec}}</h2>
+                    <img src="./assets/img/{{ot.tec}}.jpg" alt="Desenvolvedor em {{ot.tec}}" />
+                    <div class="infos">
+                        <p>Outros Projetos {{ot.tec}}</p>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</section>

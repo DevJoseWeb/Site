@@ -1,0 +1,58 @@
+nav,
+mat-toolbar {
+    width: 100%;
+}
+
+.minm {
+    display: none;
+}
+
+.yomerengues {
+    padding-right: 3vw;
+    flex: 1 1 auto;
+}
+
+.photo {
+    background-image: url('../../assets/img/foto.jpg');
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    float: left;
+}
+
+button {
+    transition-duration: 700ms;
+    transition-timing-function: ease-in;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.yomerengues button {
+    padding-top: 1vh;
+    transition-duration: 700ms;
+    transition-timing-function: ease-in;
+}
+
+.active-link {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.home-link {
+    opacity: 0;
+}
+
+@media (max-width: 800px) {
+    .minm {
+        display: block;
+    }
+    .granm {
+        display: none;
+    }
+    .active-link {
+        color: #37b597;
+    }
+}

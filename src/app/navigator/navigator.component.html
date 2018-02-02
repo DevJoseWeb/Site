@@ -1,0 +1,45 @@
+<nav>
+    <mat-toolbar color="primary">
+        <div class="yomerengues" routerLink="bio" routerLinkActive="home-link">
+            <div class="photo"></div>
+            <button mat-button>Junior - Machine Learning Engineer</button>
+        </div>
+        <div class="granm">
+            <button mat-button routerLink="development" routerLinkActive="active-link">Conocimientos</button>
+            <!--<button mat-button routerLink="work" routerLinkActive="active-link">Experiencia</button>-->
+            <!--<button mat-button routerLink="project" routerLinkActive="active-link">Projectos</button>-->
+            <button mat-button routerLink="contact" routerLinkActive="active-link">Contato</button>
+
+        </div>
+        <div class="minm">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                        <mat-icon><i class="material-icons">more_vert</i></mat-icon>
+                      </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="development" routerLinkActive="active-link">
+                          <mat-icon><i class="material-icons">bookmark</i></mat-icon>
+                          <span>Conhecimentos</span>
+                        </button>
+                <button mat-menu-item routerLink="work" routerLinkActive="active-link">
+                          <mat-icon><i class="material-icons">work</i></mat-icon>
+                          <span>Experiências</span>
+                        </button>
+                <button mat-menu-item routerLink="project" routerLinkActive="active-link">
+                          <mat-icon><i class="material-icons">important_devices</i></mat-icon>
+                          <span>Meus Projetos</span>
+                        </button>
+                <button mat-menu-item routerLink="contact" routerLinkActive="active-link">
+                    <mat-icon><i class="material-icons">contact_mail</i></mat-icon>
+                    <span>Contato</span>
+                </button>
+                <button mat-menu-item routerLink="bio" routerLinkActive="active-link">
+                        <mat-icon><i class="material-icons">account_circle</i></mat-icon>
+                        <span>Perfil</span>
+                    </button>
+            </mat-menu>
+        </div>
+
+
+    </mat-toolbar>
+
+</nav>

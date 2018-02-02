@@ -1,0 +1,50 @@
+<section>
+    <div class="air"></div>
+    <div class="forms">
+        <form (ngSubmit)="onSubmit(contactForm);" #contactForm="ngForm">
+            <mat-form-field>
+                <input matInput placeholder="Nome" #nombre maxlength="80" [(ngModel)]="ContactModel.name" name="Name" required>
+                <mat-hint align="end">{{nombre.value?.length || 0}}/80</mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="E-Mail" type="email" [(ngModel)]="ContactModel.email" name="Email" required>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Telefone" #tel type="tel" [(ngModel)]="ContactModel.phone" name="Phone" maxlength="16">
+                <mat-hint align="end">{{tel.value?.length || 0}}/16</mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Assunto" #asunto maxlength="60" [(ngModel)]="ContactModel.subject" name="Subject" required>
+                <mat-hint align="end">{{asunto.value?.length || 0}}/60</mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput placeholder="Mensagem" #msn maxlength="300" [(ngModel)]="ContactModel.msn" name="Msn" cols="25"></textarea>
+                <mat-hint align="end">{{msn.value?.length || 0}}/300</mat-hint>
+            </mat-form-field>
+            <button mat-raised-button color="primary" [disabled]="!contactForm.form.valid">Enviar</button>
+        </form>
+    </div>
+    <div class="redesd">
+        <div class="s1">
+            <a href="https://www.facebook.com/juniorosho" target="_blank"><img src="./assets/img/red/facebook.png" alt="Facebook" /></a>
+            <a href="https://twitter.com/juniorosho" target="_blank"><img src="./assets/img/red/Twitter.png" alt="Twitter" /></a>
+        </div>
+        <div class="s2">
+            <a href="https://www.linkedin.com/juniorosho" target="_blank"><img src="./assets/img/red/linkedin.png" alt="Linkedin" /></a>
+            <a href="https://gitlab.com/users/juniorosho" target="_blank"><img src="./assets/img/red/github.png" alt="Git" /></a>
+        </div>
+
+    </div>
+    <div class="redesi">
+        <div class="s1">
+            <a href="https://500px.com/shingrey" target="_blank"><img src="./assets/img/red/500px.png" alt="500px" /></a>
+            <a href="https://www.instagram.com/juniorosho" target="_blank"><img src="./assets/img/red/instagram.png" alt="Instagram" /></a>
+        </div>
+        <div class="s2">
+            <a href="https://google.com" target="_blank"><img src="./assets/img/red/Blogger.png" alt="google" /></a>
+            <a href="https://gitlab.com/users/juniorosho" target="_blank"><img src="./assets/img/red/baidu.png" alt="Akira" /></a>
+        </div>
+    </div>
+
+
+</section>

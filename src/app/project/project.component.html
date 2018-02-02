@@ -1,0 +1,19 @@
+<section>
+    <mat-card *ngFor="let project of projects; let i = index;" [ngStyle]="{'animation-delay': i*100+'ms'}">
+        <mat-card-header>
+            <div mat-card-avatar class="header-image">{{project.letter}}</div>
+            <mat-card-title>{{project.title}}</mat-card-title>
+            <mat-card-subtitle>{{project.sub}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="./assets/img/{{project.photo}}" alt="{{project.title}} - {{project.sub}}">
+        <mat-card-content>
+            <p>
+                {{project.describe}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <a href="{{project.url}}" target="_blank"><button mat-button>Visitar</button></a>
+            <!--<button mat-button>SHARE</button>-->
+        </mat-card-actions>
+    </mat-card>
+</section>
